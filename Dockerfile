@@ -5,5 +5,5 @@ WORKDIR /myapp
 ADD . /myapp
 
 RUN cp /etc/hosts /tmp/myartifact
-RUN echo 'sleep 5; echo "done"' > /tmp/script.sh
+RUN echo "#!/bin/bash\nsleep 5; echo 'done'" > /tmp/script.sh
 RUN chmod 755 /tmp/script.sh
